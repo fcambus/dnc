@@ -1,6 +1,6 @@
 {
     "name": "dnc",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A tool to check domain names configuration and statistics",
     "main": "index.js",
     "preferGlobal": "true",
