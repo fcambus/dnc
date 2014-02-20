@@ -1,0 +1,40 @@
+{
+    "name": "dnc",
+    "version": "0.1.0",
+    "description": "A tool to check domain names configuration and statistics",
+    "main": "index.js",
+    "preferGlobal": "true",
+    "bin": {
+        "dnc": "./bin/dnc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fcambus/dnc"
+    },
+    "keywords": [
+        "alexa",
+        "dns",
+        "domain",
+        "name",
+        "check",
+        "monitor"
+    ],
+    "author": {
+        "name": "Frederic Cambus",
+        "url": "http://www.cambus.net"
+    },
+    "licenses": [{
+        "type": "BSD",
+        "url": "https://github.com/fcambus/dnc/blob/master/LICENSE"
+    }],
+    "bugs": {
+        "url": "https://github.com/fcambus/dnc/issues"
+    },
+    "dependencies": {
+        "alexarank": "~0.1.0",
+        "async": "~0.2.10",
+        "cli-table": "~0.3.0",
+        "npmlog": "0.0.6",
+        "intl": "~0.1.2"
+    }
+}

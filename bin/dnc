@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+/*****************************************************************************/
+/*                                                                           */
+/* dnc 0.1.0 (c) by Frederic Cambus 2014                                     */
+/* https://github.com/fcambus/dnc                                            */
+/*                                                                           */
+/* Created: 2014/02/11                                                       */
+/* Last Updated: 2014/02/21                                                  */
+/*                                                                           */
+/* dnc is released under the BSD 2-Clause license.                           */
+/* See LICENSE file for details.                                             */
+/*                                                                           */
+/*****************************************************************************/
+
+var fs = require('fs');
+var log = require('npmlog');
+var dnc = require('../lib/dnc');
+
+var config = require("../config.json");
+
+log.info("", "dnc is running. Press Ctrl+C to stop");
+
+fs.readFile(process.env.HOME + '/.dnc', function(error, data) {
+    if (!error) {
+        config = JSON.parse(data);
+    } else {
+        log.warn("", "Can't read ~/.dnc file, using default configuration");
+    }
+
+    dnc(config);
+});
