@@ -1,6 +1,6 @@
 {
     "name": "dnc",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A CLI tool to check domain names configuration and statistics",
     "main": "index.js",
     "preferGlobal": "true",
@@ -31,7 +31,7 @@
         "url": "https://github.com/fcambus/dnc/issues"
     },
     "dependencies": {
-        "alexarank": "~0.1.0",
+        "alexarank": "~0.1.1",
         "async": "~0.2.10",
         "cli-table": "~0.3.0",
         "npmlog": "0.0.6",

@@ -13,7 +13,9 @@ Install the program :
 
 ## Usage
 
-Start dnc by invoking `dnc`.
+	dnc [domain ...]
+
+If no domains are specified as command line arguments, dnc will attempt to read its configuration file.
 
 ## Configuration
 
