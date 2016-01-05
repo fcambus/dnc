@@ -2,11 +2,12 @@
 
 /*****************************************************************************/
 /*                                                                           */
-/* dnc 0.1.2 (c) by Frederic Cambus 2014                                     */
+/* dnc 0.1.2                                                                 */
+/* Copyright (c) 2014-2016, Frederic Cambus                                  */
 /* https://github.com/fcambus/dnc                                            */
 /*                                                                           */
-/* Created: 2014/02/11                                                       */
-/* Last Updated: 2014/05/01                                                  */
+/* Created: 2014-02-11                                                       */
+/* Last Updated: 2016-01-05                                                  */
 /*                                                                           */
 /* dnc is released under the BSD 2-Clause license.                           */
 /* See LICENSE file for details.                                             */
