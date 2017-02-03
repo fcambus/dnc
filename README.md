@@ -7,7 +7,7 @@ dnc (Domain Name Checker), is a CLI tool to check domain names configuration and
 
 ## Installation
 
-Install the program :
+Install the program:
 
 	npm install -g dnc
 
@@ -21,7 +21,7 @@ If no domains are specified as command line arguments, dnc will attempt to read 
 
 Configuration options are set in the `~/.dnc` file. If dnc cannot find an user defined configuration file in the home directory, the bundled `config.json` if used instead.
 
-Example configuration with two domains :
+Example configuration with two domains:
 
 	{
 	    "domains": [
@@ -32,7 +32,7 @@ Example configuration with two domains :
 
 ## Example
 
-Here is the output of running dnc with the default configuration file :
+Here is the output of running dnc with the default configuration file:
 
 ![dnc Screenshot](http://www.cambus.net/content/2014/02/dnc.png)
 
@@ -42,7 +42,7 @@ dnc is released under the BSD 2-Clause license. See `LICENSE` file for details.
 
 ## Author
 
-dnc is developed by Frederic Cambus
+dnc is developed by Frederic Cambus.
 
 - Site : http://www.cambus.net
 - Twitter: http://twitter.com/fcambus
