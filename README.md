@@ -34,7 +34,7 @@ Example configuration with two domains:
 
 Here is the output of running dnc with the default configuration file:
 
-![dnc Screenshot](http://www.cambus.net/content/2014/02/dnc.png)
+![dnc Screenshot](https://www.cambus.net/content/2014/02/dnc.png)
 
 ## License
 
@@ -44,5 +44,5 @@ dnc is released under the BSD 2-Clause license. See `LICENSE` file for details.
 
 dnc is developed by Frederic Cambus.
 
-- Site : http://www.cambus.net
-- Twitter: http://twitter.com/fcambus
+- Site: https://www.cambus.net
+- Twitter: https://twitter.com/fcambus
