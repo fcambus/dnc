@@ -2,8 +2,7 @@
 
 ## Description
 
-dnc (Domain Name Checker), is a CLI tool to check domain names configuration and statistics. 
-  
+dnc (Domain Name Checker), is a CLI tool to check domain names configuration and statistics.
 
 ## Installation
 
