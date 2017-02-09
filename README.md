@@ -44,4 +44,3 @@ dnc is released under the BSD 2-Clause license. See `LICENSE` file for details.
 dnc is developed by Frederic Cambus.
 
 - Site: https://www.cambus.net
-- Twitter: https://twitter.com/fcambus
