@@ -6,7 +6,7 @@
 # https://github.com/fcambus/dnc
 #
 # Created: 2014-02-11
-# Last Updated: 2021-01-02
+# Last Updated: 2021-01-04
 #
 # dnc is released under the BSD 2-Clause license.
 # See LICENSE file for details.
@@ -51,14 +51,10 @@ def main():
     x.align = "l"
 
     for name in args:
-        ns = query(name, 'NS')
-        a = query(name, 'A')
-
-        row = [name, ns, a]
+        row = [name, query(name, 'NS'), query(name, 'A')]
 
         if getv6:
-            aaaa = query(name, 'AAAA')
-            row.append(aaaa)
+            row.append(query(name, 'AAAA'))
 
         x.add_row(row)
 
