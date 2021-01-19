@@ -81,7 +81,7 @@ def main():
     results.align = "l"
 
     for name in args:
-        results.add_row([name] [fn(name, action) for fn, action in actions])
+        results.add_row([name] + [fn(name, action) for fn, action in actions])
 
     print(results)
 
