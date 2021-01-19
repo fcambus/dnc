@@ -36,7 +36,7 @@ def query(domain: str, rrtype: str) -> str:
 def tls(domain: str, _: str) -> str:
     try:
         cert = ssl.get_server_certificate((domain, 443))
-    except (socket.error, socket.timeout) as error:
+    except (socket.error, socket.timeout):
         return "No TLS"
 
     x509 = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, cert)
