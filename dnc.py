@@ -23,13 +23,14 @@ from prettytable import PrettyTable
 
 socket.setdefaulttimeout(1)
 
+
 def query(domain: str, rrtype: str) -> str:
     try:
         answers = dns.resolver.resolve(domain, rrtype)
     except:
-        return ''
+        return ""
 
-    return '\n'.join([rdata.to_text() for rdata in answers])
+    return "\n".join([rdata.to_text() for rdata in answers])
 
 
 def tls(domain: str, _: str) -> str:
@@ -63,16 +64,16 @@ def main():
     for option, arg in options:
         if option == "-4":
             header.append("IPv4")
-            actions.append((query, 'A'))
+            actions.append((query, "A"))
         if option == "-6":
             header.append("IPv6")
-            actions.append((query, 'AAAA'))
+            actions.append((query, "AAAA"))
         if option == "-m":
             header.append("MX")
-            actions.append((query, 'MX'))
+            actions.append((query, "MX"))
         if option == "-n":
             header.append("NS")
-            actions.append((query, 'NS'))
+            actions.append((query, "NS"))
         if option == "-s":
             header.append("TLS")
             actions.append((tls, None))
