@@ -6,7 +6,7 @@
 # https://github.com/fcambus/dnc
 #
 # Created: 2014-02-11
-# Last Updated: 2021-01-17
+# Last Updated: 2021-01-19
 #
 # dnc is released under the BSD 2-Clause license.
 # See LICENSE file for details.
@@ -18,7 +18,7 @@ import dns.resolver
 from prettytable import PrettyTable
 
 
-def query(domain, rrtype):
+def query(domain: str, rrtype: str) -> str:
     try:
         answers = dns.resolver.resolve(domain, rrtype)
     except:
