@@ -13,10 +13,15 @@
 #
 
 import getopt
+import socket
+import ssl
 import sys
+import OpenSSL
 import dns.resolver
+from datetime import datetime
 from prettytable import PrettyTable
 
+socket.setdefaulttimeout(1)
 
 def query(domain: str, rrtype: str) -> str:
     try:
@@ -25,6 +30,18 @@ def query(domain: str, rrtype: str) -> str:
         return ''
 
     return '\n'.join([rdata.to_text() for rdata in answers])
+
+
+def tls(domain: str, _: str) -> str:
+    try:
+        cert = ssl.get_server_certificate((domain, 443))
+    except socket.timeout:
+        return "No TLS"
+
+    x509 = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, cert)
+    return datetime.strptime(
+        x509.get_notAfter().decode("ascii"), "%Y%m%d%H%M%SZ"
+    ).strftime("%Y-%m-%d")
 
 
 def main():
