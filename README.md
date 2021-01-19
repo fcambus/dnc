@@ -4,6 +4,14 @@
 
 dnc (Domain Name Checker), is a CLI tool to check domain names configuration.
 
+## Requirements
+
+dnc requires Python 3.5+ and the following Python modules:
+
+- Dnspython
+- PrettyTable
+- pyOpenSSL
+
 ## Installation
 
 ## Usage
