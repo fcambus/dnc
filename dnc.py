@@ -45,15 +45,11 @@ def tls(domain: str, _: str) -> str:
     ).strftime("%Y-%m-%d")
 
 
-def domain(domain: str, _: str) -> str:
-    return domain
-
-
 def main():
     results = PrettyTable(hrules=1)
 
     header = ["Domain"]
-    actions = [(domain, None)]
+    actions = []
 
     try:
         options, args = getopt.getopt(sys.argv[1:], "46mnsv")
@@ -85,8 +81,7 @@ def main():
     results.align = "l"
 
     for name in args:
-        row = [fn(name, action) for fn, action in actions]
-        results.add_row(row)
+        results.add_row([name] [fn(name, action) for fn, action in actions])
 
     print(results)
 
