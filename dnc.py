@@ -81,7 +81,7 @@ def main():
         if option == "-s":
             header.append("TLS")
             actions.append((tls, None))
-        elif option == "-v":
+        if option == "-v":
             print("dnc 0.2.0")
             sys.exit(0)
 
