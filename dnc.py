@@ -28,7 +28,12 @@ def usage():
     print(
         "dnc [-hv] domain\n\n"
         "The options are as follows:\n\n"
+        "	-4	Resolve and display A records (IPv4 addresses).\n"
+        "	-6	Resolve and display AAAA records (IPv6 addresses).\n"
         "	-h	Display usage.\n"
+        "	-m	Resolve and display MX records (Mail Exchange).\n"
+        "	-n	Resolve and display NS records (Name Servers).\n"
+        "	-s	Display SSL/TLS certificate expiration date.\n"
         "	-v	Display version."
     )
 
