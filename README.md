@@ -14,7 +14,7 @@ dnc requires Python 3.5+ and the following Python modules:
 
 ## Usage
 
-	dnc [-hv] domain
+	dnc [-46hmnsv] domain
 
 The options are as follows:
 

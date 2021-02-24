@@ -27,7 +27,7 @@ socket.setdefaulttimeout(1)
 
 def usage():
     usage = """\
-            dnc [-hv] domain
+            dnc [-46hmnsv] domain
 
             The options are as follows:
 
