@@ -25,10 +25,12 @@ socket.setdefaulttimeout(1)
 
 
 def usage():
-    print("dnc [-hv] domain\n\n"
-          "The options are as follows:\n\n"
-          "	-h	Display usage.\n"
-          "	-v	Display version.")
+    print(
+        "dnc [-hv] domain\n\n"
+        "The options are as follows:\n\n"
+        "	-h	Display usage.\n"
+        "	-v	Display version."
+    )
 
 
 def query(domain: str, rrtype: str) -> str:
