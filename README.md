@@ -12,8 +12,6 @@ dnc requires Python 3.5+ and the following Python modules:
 - PrettyTable
 - pyOpenSSL
 
-## Installation
-
 ## Usage
 
 	dnc [-hv] domain
@@ -33,10 +31,11 @@ The options are as follows:
 Here is the output of running dnc querying NS and A records, along with
 SSL certificate expiration date for one domain:
 
+	$ dnc -n4s cambus.net
 	+------------+--------------------------+---------------+------------+
 	| Domain     | NS                       | IPv4          | TLS        |
 	+------------+--------------------------+---------------+------------+
-	| cambus.net | oxygen.ns.hetzner.com.   | 116.203.5.115 | 2021-02-26 |
+	| cambus.net | oxygen.ns.hetzner.com.   | 116.203.5.115 | 2021-04-23 |
 	|            | hydrogen.ns.hetzner.com. |               |            |
 	|            | helium.ns.hetzner.de.    |               |            |
 	+------------+--------------------------+---------------+------------+
