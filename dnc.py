@@ -34,7 +34,7 @@ def usage():
 def query(domain: str, rrtype: str) -> str:
     try:
         answers = dns.resolver.resolve(domain, rrtype)
-    except:
+    except dns.exception.DNSException:
         return ""
 
     return "\n".join([rdata.to_text() for rdata in answers])
