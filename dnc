@@ -18,6 +18,7 @@ import ssl
 import sys
 import OpenSSL
 import dns.resolver
+import textwrap
 from datetime import datetime
 from prettytable import PrettyTable
 
@@ -25,17 +26,20 @@ socket.setdefaulttimeout(1)
 
 
 def usage():
-    print(
-        "dnc [-hv] domain\n\n"
-        "The options are as follows:\n\n"
-        "	-4	Resolve and display A records (IPv4 addresses).\n"
-        "	-6	Resolve and display AAAA records (IPv6 addresses).\n"
-        "	-h	Display usage.\n"
-        "	-m	Resolve and display MX records (Mail Exchange).\n"
-        "	-n	Resolve and display NS records (Name Servers).\n"
-        "	-s	Display SSL/TLS certificate expiration date.\n"
-        "	-v	Display version."
-    )
+    usage = """\
+            dnc [-hv] domain
+
+            The options are as follows:
+
+            	-4	Resolve and display A records (IPv4 addresses).
+            	-6	Resolve and display AAAA records (IPv6 addresses).
+            	-h	Display usage.
+            	-m	Resolve and display MX records (Mail Exchange).
+            	-n	Resolve and display NS records (Name Servers).
+            	-s	Display SSL/TLS certificate expiration date.
+            	-v	Display version."""
+
+    print(textwrap.dedent(usage))
 
 
 def query(domain: str, rrtype: str) -> str:
