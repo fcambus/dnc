@@ -6,7 +6,7 @@
 # https://github.com/fcambus/dnc
 #
 # Created: 2014-02-11
-# Last Updated: 2021-01-19
+# Last Updated: 2021-02-24
 #
 # dnc is released under the BSD 2-Clause license.
 # See LICENSE file for details.
@@ -23,6 +23,11 @@ from prettytable import PrettyTable
 
 socket.setdefaulttimeout(1)
 
+def usage():
+    print("dnc [-hv] domain\n\n" \
+          "The options are as follows:\n\n" \
+          "	-h	Display usage.\n" \
+          "	-v	Display version.")
 
 def query(domain: str, rrtype: str) -> str:
     try:
@@ -52,7 +57,7 @@ def main():
     actions = []
 
     try:
-        options, args = getopt.getopt(sys.argv[1:], "46mnsv")
+        options, args = getopt.getopt(sys.argv[1:], "46hmnsv")
     except getopt.GetoptError as err:
         print(err)
         sys.exit(1)
@@ -64,6 +69,9 @@ def main():
         if option == "-6":
             header.append("IPv6")
             actions.append((query, "AAAA"))
+        if option == "-h":
+            usage()
+            sys.exit(0)
         if option == "-m":
             header.append("MX")
             actions.append((query, "MX"))
