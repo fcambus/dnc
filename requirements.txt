@@ -1,0 +1,3 @@
+pyopenssl
+dnspython
+prettytable
