@@ -29,16 +29,22 @@ The options are as follows:
 ## Example
 
 Here is the output of running dnc querying NS and A records, along with
-SSL certificate expiration date for one domain:
+SSL certificate expiration date for two domains:
 
-	$ dnc -n4s cambus.net
-	+------------+--------------------------+---------------+------------+
-	| Domain     | NS                       | IPv4          | TLS        |
-	+------------+--------------------------+---------------+------------+
-	| cambus.net | oxygen.ns.hetzner.com.   | 116.203.5.115 | 2021-04-23 |
-	|            | hydrogen.ns.hetzner.com. |               |            |
-	|            | helium.ns.hetzner.de.    |               |            |
-	+------------+--------------------------+---------------+------------+
+```
+$ dnc -n4s cambus.net toolchains.net
++----------------+--------------------------+---------------+------------+
+| Domain         | NS                       | IPv4          | TLS        |
++----------------+--------------------------+---------------+------------+
+| cambus.net     | oxygen.ns.hetzner.com.   | 116.203.5.115 | 2021-04-23 |
+|                | hydrogen.ns.hetzner.com. |               |            |
+|                | helium.ns.hetzner.de.    |               |            |
++----------------+--------------------------+---------------+------------+
+| toolchains.net | oxygen.ns.hetzner.com.   | 116.203.5.115 | 2021-04-23 |
+|                | helium.ns.hetzner.de.    |               |            |
+|                | hydrogen.ns.hetzner.com. |               |            |
++----------------+--------------------------+---------------+------------+
+```
 
 ## License
 
