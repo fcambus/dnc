@@ -70,7 +70,7 @@ def main():
     actions = []
 
     try:
-        options, args = getopt.getopt(sys.argv[1:], "46hmnsv")
+        options, args = getopt.getopt(sys.argv[1:], "46chmnsv")
     except getopt.GetoptError as err:
         print(err)
         sys.exit(1)
@@ -82,6 +82,9 @@ def main():
         if option == "-6":
             header.append("IPv6")
             actions.append((query, "AAAA"))
+        if option == "-c":
+            header.append("CAA")
+            actions.append((query, "CAA"))
         if option == "-h":
             usage()
             sys.exit(0)
