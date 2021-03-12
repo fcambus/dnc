@@ -72,7 +72,7 @@ def main():
     actions = []
 
     try:
-        options, args = getopt.getopt(sys.argv[1:], "46chmnstv")
+        options, args = getopt.getopt(sys.argv[1:], "462hmnstv")
     except getopt.GetoptError as err:
         print(err)
         sys.exit(1)
