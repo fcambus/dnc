@@ -33,10 +33,12 @@ def usage():
 
             	-4	Resolve and display A records (IPv4 addresses).
             	-6	Resolve and display AAAA records (IPv6 addresses).
+                -2  Resolve and display CAA records (RFC6844/Type 257)
             	-h	Display usage.
             	-m	Resolve and display MX records (Mail Exchange).
             	-n	Resolve and display NS records (Name Servers).
             	-s	Display SSL/TLS certificate expiration date.
+                -t  Resolve and display TXT records
             	-v	Display version."""
 
     print(textwrap.dedent(usage))
@@ -82,7 +84,7 @@ def main():
         if option == "-6":
             header.append("IPv6")
             actions.append((query, "AAAA"))
-        if option == "-c":
+        if option == "-2":
             header.append("CAA")
             actions.append((query, "CAA"))
         if option == "-h":
