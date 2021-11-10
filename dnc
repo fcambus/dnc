@@ -35,10 +35,12 @@ def usage():
 
             	-4	Resolve and display A records (IPv4 addresses).
             	-6	Resolve and display AAAA records (IPv6 addresses).
+                -2  Resolve and display CAA records (RFC6844/Type 257)
             	-h	Display usage.
             	-m	Resolve and display MX records (Mail Exchange).
             	-n	Resolve and display NS records (Name Servers).
             	-s	Display SSL/TLS certificate expiration date.
+                -t  Resolve and display TXT records
             	-v	Display version."""
 
     print(textwrap.dedent(usage))
@@ -72,7 +74,7 @@ def main():
     actions = []
 
     try:
-        options, args = getopt.getopt(sys.argv[1:], "46hmnsv")
+        options, args = getopt.getopt(sys.argv[1:], "462chmnstv")
     except getopt.GetoptError as err:
         print(err)
         sys.exit(1)
@@ -84,6 +86,12 @@ def main():
         if option == "-6":
             header.append("IPv6")
             actions.append((query, "AAAA"))
+        if option == "-2":
+            header.append("CAA")
+            actions.append((query, "CAA"))
+        if option == "-c":
+            header.append("CNAME")
+            actions.append((query, "CNAME"))
         if option == "-h":
             usage()
             sys.exit(0)
@@ -96,6 +104,9 @@ def main():
         if option == "-s":
             header.append("TLS")
             actions.append((tls, None))
+        if option == '-t':
+            header.append("TXT")
+            actions.append((query, "TXT"))
         if option == "-v":
             print("dnc 0.2.0")
             sys.exit(0)

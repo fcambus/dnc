@@ -15,7 +15,7 @@
 .Nd Check domain names configuration
 .Sh SYNOPSIS
 .Nm
-.Op Fl 46hmnsv
+.Op Fl 46chmnstv
 .Ar domain
 .Sh DESCRIPTION
 .Nm
@@ -27,6 +27,10 @@ The options are as follows:
 Resolve and display A records (IPv4 addresses).
 .It Fl 6
 Resolve and display AAAA records (IPv6 addresses).
+.It Fl 2
+Resolve and display CAA records (Certificate Authority Authorization / RFC6844, Type 257)
+.It Fl c
+Resolve and display CNAME records
 .It Fl h
 Display usage.
 .It Fl m
@@ -35,6 +39,8 @@ Resolve and display MX records (Mail Exchange).
 Resolve and display NS records (Name Servers).
 .It Fl s
 Display SSL/TLS certificate expiration date.
+.It Fl t
+Resolve and display TXT records (Generic text records)
 .It Fl v
 Display version.
 .El
